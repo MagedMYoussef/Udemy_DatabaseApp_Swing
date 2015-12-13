@@ -8,6 +8,7 @@ public class FormEvent extends EventObject {
 	private String empCategory;
 	private String taxID;
 	private boolean usCitizen;
+	private String gender;
 
 	// source is the object that invoked the event
 	public FormEvent(Object source) {
@@ -15,7 +16,7 @@ public class FormEvent extends EventObject {
 	}
 
 	public FormEvent(Object source, String name, String occupation,
-			int ageCategory, String empCategory, String taxID, boolean usCitizen) {
+			int ageCategory, String empCategory, String taxID, boolean usCitizen, String gender) {
 		super(source);
 
 		this.name = name;
@@ -24,6 +25,11 @@ public class FormEvent extends EventObject {
 		this.empCategory = empCategory;
 		this.taxID = taxID;
 		this.usCitizen = usCitizen;
+		this.gender = gender;
+	}
+
+	public String getGender() {
+		return gender;
 	}
 
 	public String getTaxID() {
